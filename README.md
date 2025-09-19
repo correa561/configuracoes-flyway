@@ -14,10 +14,12 @@ spring.flyway.locations=classpath:db/migrations
 spring.flyway.baseline-on-migrate=true
 
 🔍 Explicando as Propriedades
-Propriedade	Descrição
-spring.flyway.enabled=true	Habilita o Flyway para rodar as migrações automaticamente na inicialização da aplicação.
-spring.flyway.locations=...	Define o caminho onde os scripts .sql de migração estão localizados. Ex: resources/db/migrations.
-spring.flyway.baseline-on-migrate=true	Cria uma baseline (marco inicial) se o banco já contiver dados, evitando erros em bancos existentes.
+| Propriedade                              | Descrição                                                                                             |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `spring.flyway.enabled=true`             | Habilita o Flyway para rodar as migrações automaticamente na inicialização da aplicação.              |
+| `spring.flyway.locations=...`            | Define o caminho onde os scripts `.sql` de migração estão localizados. Ex: `resources/db/migrations`. |
+| `spring.flyway.baseline-on-migrate=true` | Cria uma baseline (marco inicial) se o banco já contiver dados, evitando erros em bancos existentes.  |
+
 📁 Estrutura Esperada
 
 Se estiver usando a configuração acima, crie seus scripts SQL no seguinte caminho:
@@ -30,6 +32,7 @@ src/
                 ├── V1__criar_tabela_usuario.sql
                 ├── V2__adicionar_coluna_email.sql
                 └── ...
+
 
 
 ⚠️ Lembre-se: os nomes dos arquivos devem seguir o padrão V<versão>__<descricao>.sql para que o Flyway os reconheça corretamente.
