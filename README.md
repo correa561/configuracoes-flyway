@@ -13,7 +13,7 @@ spring.flyway.locations=classpath:db/migrations
 # Permite aplicar as migrações mesmo se o banco já existir
 spring.flyway.baseline-on-migrate=true
 
-🔍 Explicando as Propriedades
+#🔍 Explicando as Propriedades
 | Propriedade                              | Descrição                                                                                             |
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | `spring.flyway.enabled=true`             | Habilita o Flyway para rodar as migrações automaticamente na inicialização da aplicação.              |
